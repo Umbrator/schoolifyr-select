@@ -1,0 +1,162 @@
+.zx-tabs {
+    background: #faf8f6;
+    padding: 15px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+}
+
+.zx-tab {
+    margin-bottom: 10px;
+    border: 1px dashed #d8d8d8;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.zx-tab input[type="checkbox"] {
+    display: none;
+}
+
+.zx-tab-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #92434e;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px dashed black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.zx-tab-label:hover {
+    background-color: #486D65;
+    color: white;
+}
+
+.zx-tab-label.deal,
+.zx-tab-label.best-deal,
+.zx-tab-label.good-deal {
+    background-color: #fff8f5;
+    border: 1px dashed #92434e;
+    transition: background-color 0.3s ease;
+}
+
+.zx-tab-label.best-deal {
+    background-color: #fff0f0;
+}
+
+.zx-tab-label.good-deal {
+    background-color: #fff8f5;
+}
+
+.zx-tab-label.deal:hover span,
+.zx-tab-label.best-deal:hover span,
+.zx-tab-label.good-deal:hover span {
+    background-color: #92434e;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.zx-tab-label span {
+    background-color: #92434e;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.zx-tab-label span small {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.zx-tab-content {
+    display: none;
+    overflow: hidden;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #e0dcdc;
+    border-radius: 0 0 8px 8px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    max-height: 0;
+}
+
+.zx-tab input[type="checkbox"]:checked + .zx-tab-label + .zx-tab-content {
+    display: block;
+    padding: 20px;
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+}
+
+.zx-slider-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.zx-slider-nav button {
+    background-color: #486d65;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    width: 48%;
+}
+
+.zx-slider-nav button:hover {
+    background-color: #b33a3a;
+}
+
+.zx-packs {
+    margin-top: 20px;
+}
+
+.zx-packs .classroom,
+.zx-packs .online {
+    background-color: #92434e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.zx-packs .buy-button {
+    border: 1px solid #92434e;
+    background-color: white;
+    color: #92434e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zx-packs .buy-button:hover {
+    background-color: #92434e;
+    color: white;
+    border-color: #92434e;
+}
+
+.zx-tab-label:after {
+    content: "›";
+    font-size: 20px;
+    color: #92434e;
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.zx-tab input[type="checkbox"]:checked + .zx-tab-label:after {
+    transform: rotate(90deg);
+}
